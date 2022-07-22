@@ -20,10 +20,16 @@ namespace MyLegacyApp.Extensions
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new Bundle("~/bundles/hello-world").Include(
+            bundles.Add(new Bundle("~/bundles/angular-common").Include(
                       "~/Scripts/Angular/build_package/polyfills.*",
-                      "~/Scripts/Angular/build_package/runtime.*",
+                      "~/Scripts/Angular/build_package/runtime.*"
+                      ));
+
+            bundles.Add(new Bundle("~/bundles/hello-world").Include(
                       "~/Scripts/Angular/build_package/hello_world.*"
+                      ));
+            bundles.Add(new Bundle("~/bundles/another-module").Include(
+                      "~/Scripts/Angular/build_package/another_module.*"
                       ));
         }
         public static void AddStyles(this BundleCollection bundles)

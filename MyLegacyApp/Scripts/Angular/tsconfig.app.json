@@ -8,6 +8,7 @@
   "files": [
     "src/main.ts",
     "src/app/hello-world/main.ts",
+    "src/app/another-module/main.ts",
     "src/polyfills.ts"
   ],
   "include": [
