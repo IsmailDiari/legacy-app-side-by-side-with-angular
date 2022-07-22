@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ComponentOneComponent } from './component-one/component-one.component';
 import { ComponentTwoComponent } from './component-two/component-two.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AnotherModuleModule } from '../another-module/another-module.module';
 
 const routes: Routes = [
   { path: 'one', component: ComponentOneComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
+    AnotherModuleModule,
     RouterModule.forRoot(routes)
   ],
   exports: [HelloWorldComponent, ComponentOneComponent, ComponentTwoComponent],

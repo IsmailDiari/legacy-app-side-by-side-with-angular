@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -19,7 +18,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   exports: [HomeComponent],
-  bootstrap: [HomeComponent],
   providers: [{ provide: APP_BASE_HREF, useValue: '' }]
 })
 export class AnotherModuleModule { }

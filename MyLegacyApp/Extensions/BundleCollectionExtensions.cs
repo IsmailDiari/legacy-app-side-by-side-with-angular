@@ -20,15 +20,15 @@ namespace MyLegacyApp.Extensions
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            bundles.Add(new Bundle("~/bundles/angular-common").Include(
+            bundles.Add(new Bundle("~/bundles/angular/common").Include(
                       "~/Scripts/Angular/build_package/polyfills.*",
                       "~/Scripts/Angular/build_package/runtime.*"
                       ));
 
-            bundles.Add(new Bundle("~/bundles/hello-world").Include(
+            bundles.Add(new Bundle("~/bundles/angular/hello-world").Include(
                       "~/Scripts/Angular/build_package/hello_world.*"
                       ));
-            bundles.Add(new Bundle("~/bundles/another-module").Include(
+            bundles.Add(new Bundle("~/bundles/angular/shared/another-module").Include(
                       "~/Scripts/Angular/build_package/another_module.*"
                       ));
         }
@@ -40,7 +40,7 @@ namespace MyLegacyApp.Extensions
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-            bundles.Add(new StyleBundle("~/Content/angular-styles").Include(
+            bundles.Add(new StyleBundle("~/Content/angular/common").Include(
                 "~/Scripts/Angular/build_package/styles.*"));
         }
     }
